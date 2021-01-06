@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f24a5455b51d142aba247d7b9587e4, type: 3}
+  m_Name: ObstacleWave15
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 3037826859808915349, guid: 676837dfc95b3494ea9f4bc0873e9a8d, type: 3}
+  pathPrefab: {fileID: 1015927854306810393, guid: 2ab09755608ab3c4a9fb9120b7e2e665, type: 3}
+  timeBetweenSpawns: 2
+  spawnRandomFactor: 0.3
+  numberOfEnemies: 5
+  enemyMoveSpeed: 2
