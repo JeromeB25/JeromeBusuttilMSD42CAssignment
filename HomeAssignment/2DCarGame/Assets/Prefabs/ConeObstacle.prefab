@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 7424057575986924075}
   - component: {fileID: 7424057575986924074}
   - component: {fileID: 5177738487178644876}
-  m_Layer: 0
+  - component: {fileID: 6766577334826103963}
+  m_Layer: 9
   m_Name: ConeObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,8 +152,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e202ccf43c8ff14ea66da70860344d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6766577334826103963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7424057575986924500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6997f66671792bb4ba441a96f8748178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   shotcounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   ObstacleBulletPrefab: {fileID: 7073222269005307189, guid: e2537ee9c0c42c84ab4f54e309888ac9, type: 3}
   ObstacleBulletSpeed: 0.3
+  obstacleShoot: {fileID: 0}
+  obstacleShootVolume: 0.5

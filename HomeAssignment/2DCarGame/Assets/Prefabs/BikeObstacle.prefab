@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2828108883942031569}
   - component: {fileID: 2828108883942031570}
   - component: {fileID: 2828108883942031581}
-  m_Layer: 0
+  - component: {fileID: -1878736790078958324}
+  m_Layer: 9
   m_Name: BikeObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,3 +139,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+--- !u!114 &-1878736790078958324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2828108883942031582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e202ccf43c8ff14ea66da70860344d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

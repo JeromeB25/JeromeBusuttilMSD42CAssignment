@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7073222269005307191}
   - component: {fileID: 7073222269005307184}
   - component: {fileID: 7073222269005307188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bc42a1d4479d344a26b1f5540230a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2

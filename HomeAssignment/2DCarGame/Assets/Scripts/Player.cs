@@ -6,7 +6,12 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] float playerMoveSpeed = 10f;
-    [SerializeField] float padding = 0.1f; 
+    [SerializeField] float padding = 0.1f;
+    [SerializeField] float health = 50f;
+
+    //Sound
+    [SerializeField] AudioClip deathSound;
+    [SerializeField] [Range(0, 1)] float deathSoundVolume = 1f;
 
     float xMin, xMax, yMin, yMax; 
 
@@ -38,5 +43,38 @@ public class Player : MonoBehaviour
         var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
 
         transform.position = new Vector2(newXPos, yMin); 
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        //access the DamageDealer class from otherObject which hits enemy and reduce health accordingly
+        ObstacleDamageDealer dmgDealer = otherObject.gameObject.GetComponent<ObstacleDamageDealer>();
+
+        if (!dmgDealer)
+        {
+            return;
+        }
+
+        ProcessHit(dmgDealer);
+    }
+
+    private void ProcessHit(ObstacleDamageDealer dmgDealer)
+    {
+        health -= dmgDealer.Damage();
+
+        dmgDealer.ObstacleHit();
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
+        //Find the Level object and run its methond LoadGameOver()
+        FindObjectOfType<Level>().LoadGameOver();
     }
 }
