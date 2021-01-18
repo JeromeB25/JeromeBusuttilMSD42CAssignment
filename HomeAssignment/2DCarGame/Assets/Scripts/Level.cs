@@ -33,4 +33,15 @@ public class Level : MonoBehaviour
         //will only work on EXE game
         Application.Quit();
     }
+
+    IEnumerator WinningScene()
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("GameWin");
+    }
+
+    public void LoadGameWin()
+    {
+        StartCoroutine(WinningScene());
+    }
 }
