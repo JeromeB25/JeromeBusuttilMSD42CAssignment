@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObstacleMovements : MonoBehaviour
 {
+    [SerializeField] int scorevalue = 5;
 
     [SerializeField] List<Transform> waypoints;
 
@@ -50,6 +51,7 @@ public class ObstacleMovements : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<GameSession>().AddToScore(scorevalue); 
             Destroy(gameObject);
         }
     }

@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    //SerializeFields 
     [SerializeField] float playerMoveSpeed = 10f;
     [SerializeField] float padding = 0.1f;
     [SerializeField] float health = 50f;
 
+    //SerializeFields
     //Sound
     [SerializeField] AudioClip deathSound;
     [SerializeField] [Range(0, 1)] float deathSoundVolume = 1f;
+
+    [SerializeField] AudioClip CrashSound; 
+    [SerializeField] [Range(0, 1)] float CrashSoundVolume = 1f;
+
+    //Particles
+    [SerializeField] GameObject ExplosionParticles;
+    [SerializeField] float Particletime = 1f;
 
     float xMin, xMax, yMin, yMax; 
 
@@ -63,6 +71,11 @@ public class Player : MonoBehaviour
         health -= dmgDealer.Damage();
 
         dmgDealer.ObstacleHit();
+        AudioSource.PlayClipAtPoint(CrashSound, Camera.main.transform.position, CrashSoundVolume);
+
+
+        GameObject Particles = Instantiate(ExplosionParticles, transform.position, Quaternion.identity);
+        Destroy(Particles, Particletime);
 
         if (health <= 0)
         {
