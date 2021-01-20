@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //SerializeFields 
+    //Player
     [SerializeField] float playerMoveSpeed = 10f;
     [SerializeField] float padding = 0.1f;
     [SerializeField] float health = 50f;
@@ -96,3 +97,4 @@ public class Player : MonoBehaviour
         FindObjectOfType<Level>().LoadGameOver();
     }
 }
+

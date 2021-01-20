@@ -32,7 +32,7 @@ public class GameSession : MonoBehaviour
 
     public void AddToScore (int scorevalue)
     {
-        score += scorevalue; 
+        score += scorevalue;
     }
 
     public void ResetGame()
@@ -40,3 +40,4 @@ public class GameSession : MonoBehaviour
         Destroy (gameObject); 
     }
 }
+

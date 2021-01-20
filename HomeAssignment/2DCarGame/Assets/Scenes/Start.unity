@@ -340,17 +340,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545734643}
   m_CullTransparentMesh: 0
---- !u!114 &859063196 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5744398292513558913, guid: 577163191fe60af438005e43b1214029, type: 3}
-  m_PrefabInstance: {fileID: 5744398292798001693}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ce24b36667fbe74e9089c4693e72229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &917187588
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +487,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 859063196}
+      - m_Target: {fileID: 5744398292513558913, guid: 577163191fe60af438005e43b1214029, type: 3}
         m_TargetAssemblyTypeName: Level, Assembly-CSharp
         m_MethodName: LoadGame
         m_Mode: 1
@@ -688,7 +677,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 859063196}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Level, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
